@@ -16,10 +16,10 @@ on:
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   call-workflow-A:
-    uses: rguthriemsft/practice/.github/workflow-templates/template_a.yml@main
+    uses: rguthriemsft/practice/.github/workflows/template_a.yml@main
     with:
       username: richardA
   call-workflow-B:
-    uses: rguthriemsft/practice/.github/workflow-templates/template_b.yml@main
+    uses: rguthriemsft/practice/.github/workflows/template_b.yml@main
     with:
       username: richardB
