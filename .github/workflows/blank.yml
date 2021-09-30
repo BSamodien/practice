@@ -17,9 +17,9 @@ on:
 jobs:
   call-workflow-A:
     uses: BSamodien/practice/.github/workflows/template_a.yml@main
-    # with:
-    #   username: ${{ matrix.username }}
+    with:
+      username: brentsa
   call-workflow-B:
     uses: BSamodien/practice/.github/workflows/template_b.yml@main
-    # with:
-    #   username: richardB
+    with:
+      username: brentsb
