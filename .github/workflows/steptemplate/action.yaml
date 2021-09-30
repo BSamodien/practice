@@ -1,0 +1,13 @@
+name: "My composite action"
+description: "Emulates nested step template"
+inputs:
+  username:
+    description: 'User Name to Echo'
+    required: true
+    default: 'brent'
+runs:
+  using: "composite"
+  steps:
+    - name: Print the input name for template
+      run: echo The username is ${{ inputs.username }}
+      shell: bash

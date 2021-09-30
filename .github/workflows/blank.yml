@@ -16,15 +16,14 @@ on:
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   call-workflow-a:
-    uses: BSamodien/practice/.github/workflows/template_a.yml@main
     runs-on: ubuntu-latest
     strategy:
           matrix:
             username: ['richardA', richardB]
-    # steps:
-    #   - uses: BSamodien/practice/.github/workflows/template_a.yml@main
-    #     with:
-    #       username: ${{ matrix.username }}
+    steps:
+      - uses: ./BSamodien/practice/.github/workflows/steptemplate
+        with:
+          username: ${{ matrix.username }}
   # call-workflow-B:
   #   uses: BSamodien/practice/.github/workflows/template_b.yml@main
   #   with:
