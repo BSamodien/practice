@@ -12,5 +12,5 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Print the input name for template A
+      - name: Print the input name for template
         run: echo The username is ${{ inputs.username }}
