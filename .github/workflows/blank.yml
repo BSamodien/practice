@@ -16,10 +16,13 @@ on:
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   call-workflow-A:
+    strategy:
+      matrix:
+        username: ['richardA', richardB]
     uses: rguthriemsft/practice/.github/workflows/template_a.yml@main
     with:
-      username: richardA
-  call-workflow-B:
-    uses: rguthriemsft/practice/.github/workflows/template_b.yml@main
-    with:
-      username: richardB
+      username: ${{ matrix.username }}
+  # call-workflow-B:
+  #   uses: rguthriemsft/practice/.github/workflows/template_b.yml@main
+  #   with:
+  #     username: richardB
