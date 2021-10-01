@@ -21,7 +21,7 @@ jobs:
           matrix:
             username: ['richardA', richardB]
     steps:
-      - uses: ./.github/workflows/steptemplate@main
+      - uses: ./.github/workflows/steptemplate
         with:
           username: ${{ matrix.username }}
   # call-workflow-B:
