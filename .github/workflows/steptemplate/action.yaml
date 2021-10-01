@@ -8,6 +8,7 @@ inputs:
 runs:
   using: "composite"
   steps:
+    - uses: actions/checkout@v2
     - name: Print the input name for template
       run: echo The username is ${{ inputs.username }}
       shell: bash
